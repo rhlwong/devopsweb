@@ -23,7 +23,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/dockerfiles/Dockerfile'
+        command: buildAndPush
+        #dockerfile: '$(Build.SourcesDirectory)/dockerfiles/Dockerfile'
+        repository: rhlw/docker-demo2
         tags: |
           $(tag)
